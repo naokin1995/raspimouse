@@ -31,7 +31,7 @@ class Rt_motor_driver:
       #rospy.logerr("Cannot write to"+ self.init_file)
       pass
 
-  def right_motor_driver(self,freq):
+  def r_motor(self,freq):
     try:
       with open('/dev/rtmotor_raw_r0','w') as f:
         print >> f,str(freq)
@@ -41,7 +41,7 @@ class Rt_motor_driver:
       pass
     
 
-  def left_motor_driver(self,freq):
+  def l_motor(self,freq):
     try:
       with open('/dev/rtmotor_raw_l0','w') as f:
         print >> f,str(freq)
@@ -54,12 +54,12 @@ class Rt_motor_driver:
 if __name__ =="__main__":
   ins=Rt_motor_driver()
   
-  ins.right_motor_driver(400)
+  ins.r_motor(400)
   time.sleep(10)
-  ins.right_motor_driver(0)
-  ins.left_motor_driver(500)
+  ins.r_motor(0)
+  ins.l_motor(500)
   time.sleep(10)
-  ins.left_motor_driver(0)
+  ins.l_motor(0)
   
       
       

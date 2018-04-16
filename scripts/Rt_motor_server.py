@@ -17,5 +17,5 @@ class Rt_motor_server:
     
     
     
-if __name__=='_main__':
+if __name__=='__main__':
   ins=Rt_motor_server()

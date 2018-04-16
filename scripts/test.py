@@ -20,7 +20,7 @@ class Rt_motor_driver:
       
       
       
-def __name__ =="__main__":
+if __name__ =="__main__":
   ins=Rt_motor_driver()
       
       

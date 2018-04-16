@@ -1,2 +1,4 @@
-test
+import rospy
 
+
+print 'hello world.'

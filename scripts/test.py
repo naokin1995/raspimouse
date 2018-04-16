@@ -7,6 +7,7 @@ class Rt_motor_driver:
   
   def __init__(self):
     self.init_file='/dev/rtmotoren0'
+    self.right_wheel='/dev/rtmotor_raw_r0'
     self.__init_motor()
     
     
@@ -32,8 +33,8 @@ class Rt_motor_driver:
 
   def right_motor_driver(self,freq):
     try:
-      with open('/dev/rtmotor_raw_r0','w') as f:
-        print >> f,'freq'
+      with open(self.right_wheel,'w') as f:
+        print >> f,str(freq)
         
     except:
       #rospy.logerr("Cannot write to"+ self.init_file)

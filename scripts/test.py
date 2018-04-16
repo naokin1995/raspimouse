@@ -7,7 +7,7 @@ class Rt_motor_driver:
   
   def __init__(self):
     self.init_file='/dev/rtmotoren0'
-    __init_motor()
+    self.__init_motor()
     
     
     

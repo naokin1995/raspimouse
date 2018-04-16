@@ -17,8 +17,8 @@ class Rt_motor_driver:
         print >> f,'1'
         
     except:
-      rospy.logerr("Cannot write to"+ self.init_file)
-      
+      #rospy.logerr("Cannot write to"+ self.init_file)
+      pass
       
       
 if __name__ =="__main__":

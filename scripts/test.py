@@ -13,7 +13,7 @@ class Rt_motor_driver:
     
   def __init_motor(self):
     try:
-      with open(init_file,'w') as f:
+      with open(self.init_file,'w') as f:
         print >> f,'1'
         
     except:

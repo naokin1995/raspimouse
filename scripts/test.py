@@ -15,6 +15,7 @@ class Rt_motor_driver:
     try:
       with open(self.init_file,'w') as f:
         print >> f,'1'
+        time.sleep(1)
         
     except:
       #rospy.logerr("Cannot write to"+ self.init_file)

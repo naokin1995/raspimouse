@@ -19,9 +19,32 @@ class Rt_motor_driver:
     except:
       #rospy.logerr("Cannot write to"+ self.init_file)
       pass
+
+  def __fin_motor(self):
+    try:
+      with open(self.init_file,'w') as f:
+        print >> f,'0'
+        
+    except:
+      #rospy.logerr("Cannot write to"+ self.init_file)
+      pass
+
+  def right_motor_driver(self,freq):
+    try:
+      with open('/dev/rtmotor_raw_r0','w') as f:
+        print >> f,'freq'
+        
+    except:
+      #rospy.logerr("Cannot write to"+ self.init_file)
+      pass
       
       
 if __name__ =="__main__":
   ins=Rt_motor_driver()
+  
+  ins.right_motor_driver(400)
+  time.sleep(10)
+  ins.right_motor_driver(0)
+  
       
       

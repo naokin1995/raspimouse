@@ -16,11 +16,11 @@ class Rt_Motor_Subscriber:
     
   def callback(self,message):
     print message.axes
-    print message.axes[0]*400
-    print message.axes[0]*400
+    print message.axes[0]*400.0
+    print message.axes[0]*400.0
     
-    self.motor_driv.r_motor(message.axes[1]*400)
-    self.motor_driv.l_motor(message.axes[1]*400)
+    self.motor_driv.r_motor(message.axes[1]*400.0)
+    self.motor_driv.l_motor(message.axes[1]*400.0)
     
   def test_drive(self):
     self.motor_driv.r_motor(400)

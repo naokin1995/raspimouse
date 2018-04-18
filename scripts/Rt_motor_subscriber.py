@@ -10,6 +10,12 @@ class Rt_Motor_Subscriber:
     self.motor_driv=Rt_motor_driver()
     rospy.init_node('Rt_motor_Subscriber')
     self.sub=rospy.Subscriber('/joy',Joy,self.callback)
+    rospy.spin()
+    
+
+    
+  def callback(message):
+    print message
     
     self.motor_driv.r_motor(400)
     self.motor_driv.l_motor(400)
@@ -18,9 +24,6 @@ class Rt_Motor_Subscriber:
     
     self.motor_driv.r_motor(0)
     self.motor_driv.l_motor(0)
-    
-  def callback(message):
-    print message
 
 
 if __name__=='__main__':

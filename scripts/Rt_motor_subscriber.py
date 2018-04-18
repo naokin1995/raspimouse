@@ -18,10 +18,19 @@ class Rt_Motor_Subscriber:
     print message.axes
     print message.axes[1]*400.0
     print message.axes[1]*400.0
+    print message.axes[0]*400.0
+    print message.axes[0]*400.0
     
-    self.motor_driv.r_motor(int(message.axes[1]*400.0))
-    self.motor_driv.l_motor(int(message.axes[1]*400.0))
+    if message.axes[0] > 0:
+      self.motor_driv.r_motor(int(message.axes[1]*400.0))
+      self.motor_driv.l_motor(int(message.axes[1]*400.0 + message.axes[0]*400.0))
+      
+    elif message.axes[0] < 0:
+      self.motor_driv.r_motor(int(message.axes[1]*400.0 + message.axes[0]*400.0))
+      self.motor_driv.l_motor(int(message.axes[1]*400.0))      
     
+    
+
   def test_drive(self):
     self.motor_driv.r_motor(400)
     self.motor_driv.l_motor(400)

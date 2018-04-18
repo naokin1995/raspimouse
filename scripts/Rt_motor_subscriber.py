@@ -2,7 +2,7 @@
 import rospy
 import time
 from Rt_motor import Rt_motor_driver
-from sensor_msg import Joy
+from sensor_msgs.msg import Joy
 
 
 class Rt_Motor_Subscriber:

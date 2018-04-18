@@ -7,6 +7,9 @@ from sensor_msgs.msg import Joy
 
 class Rt_Motor_Subscriber:
   def __init__(self):
+    
+    self.speed=400.0
+    
     self.motor_driv=Rt_motor_driver()
     rospy.init_node('Rt_motor_Subscriber')
     self.sub=rospy.Subscriber('/joy',Joy,self.callback)
@@ -16,22 +19,22 @@ class Rt_Motor_Subscriber:
     
   def callback(self,message):
     print message.axes
-    print message.axes[1]*400.0
-    print message.axes[1]*400.0
-    print message.axes[0]*400.0
-    print message.axes[0]*400.0
+    print message.axes[1]*self.speed
+    print message.axes[1]*self.speed
+    print message.axes[0]*self.speed
+    print message.axes[0]*self.speed
     
     if message.axes[0] > 0:
-      self.motor_driv.r_motor(int(message.axes[1]*400.0 + message.axes[0]*400.0))
-      self.motor_driv.l_motor(int(message.axes[1]*400.0 - message.axes[0]*400.0))
+      self.motor_driv.r_motor(int(message.axes[1]*self.speed + message.axes[0]*self.speed))
+      self.motor_driv.l_motor(int(message.axes[1]*self.speed - message.axes[0]*self.speed))
       
     elif message.axes[0] < 0:
-      self.motor_driv.r_motor(int(message.axes[1]*400.0 + message.axes[0]*400.0))
-      self.motor_driv.l_motor(int(message.axes[1]*400.0 - message.axes[0]*400.0))
+      self.motor_driv.r_motor(int(message.axes[1]*self.speed + message.axes[0]*self.speed))
+      self.motor_driv.l_motor(int(message.axes[1]*self.speed - message.axes[0]*self.speed))
       
     else:
-      self.motor_driv.r_motor(int(message.axes[1]*400.0))
-      self.motor_driv.l_motor(int(message.axes[1]*400.0))
+      self.motor_driv.r_motor(int(message.axes[1]*self.speed))
+      self.motor_driv.l_motor(int(message.axes[1]*self.speed))
     
     
 

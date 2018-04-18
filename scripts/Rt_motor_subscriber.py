@@ -27,7 +27,11 @@ class Rt_Motor_Subscriber:
       
     elif message.axes[0] < 0:
       self.motor_driv.r_motor(int(message.axes[1]*400.0 + message.axes[0]*400.0))
-      self.motor_driv.l_motor(int(message.axes[1]*400.0))      
+      self.motor_driv.l_motor(int(message.axes[1]*400.0))
+      
+    else:
+      self.motor_driv.r_motor(int(message.axes[1]*400.0))
+      self.motor_driv.l_motor(int(message.axes[1]*400.0))
     
     
 

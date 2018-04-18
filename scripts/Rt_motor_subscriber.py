@@ -9,7 +9,7 @@ class Rt_Motor_Subscriber:
   def __init__(self):
     self.motor_driv=Rt_motor_driver()
     rospy.init_node('Rt_motor_Subscriber')
-    self.sub=rsopy.Subscriber('/joy',Joy,self.callback)
+    self.sub=rospy.Subscriber('/joy',Joy,self.callback)
     
     self.motor_driv.r_motor(400)
     self.motor_driv.l_motor(400)

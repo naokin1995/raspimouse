@@ -14,7 +14,7 @@ class Rt_Motor_Subscriber:
     
 
     
-  def callback(message):
+  def callback(self,message):
     print message
     
     self.motor_driv.r_motor(400)

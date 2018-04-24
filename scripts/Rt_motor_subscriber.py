@@ -8,7 +8,7 @@ from sensor_msgs.msg import Joy
 class Rt_Motor_Subscriber:
   def __init__(self):
     
-    self.speed=400.0
+    self.speed=600.0
     
     self.motor_driv=Rt_motor_driver()
     rospy.init_node('Rt_motor_Subscriber')

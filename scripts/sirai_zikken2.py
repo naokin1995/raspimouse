@@ -6,5 +6,7 @@ while True:
  with open(sensor_file,'r') as se:
   data=se.read()
   list_data=data.split(' ')
-  print list_data[0]
+  print list_deta[0] + ' ' + list_data[3]
+  
+  
 

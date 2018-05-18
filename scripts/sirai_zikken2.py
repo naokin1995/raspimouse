@@ -7,7 +7,7 @@ while True:
   data=se.read()
   list_data=data.split(' ')
   print list_data[0] + ' ' + list_data[3]
-   if (list_data[0] <'200' and list_data[3]<'200'):
+   if (int(list_data[0]) <200 and int(list_data[3])<200):
     with open(buzzer_file,'w') as b:
      print >> b,'10000'
    else:

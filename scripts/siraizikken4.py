@@ -8,17 +8,23 @@ motor_filer='/dev/rtmotor_raw_r0'
 with open (motor_file,'w') as m:
  print >> m,'1'
 
+def right_motor(num):
+ with open (motor_filer,'w') as mr:
+       print >> mr,str(num)
+def left_motor(num):
+ with open (motor_filel,'w') as ml:
+       print >> ml,str(num)
+ 
 def callback(msg):
-   if (msg.axes[0]==1):
-     with open (motor_filel,'w') as ml:
-       print >> ml,'400'
-     with open (motor_filer,'w') as mr:
-       print >> mr,'400'
-   if (msg.axes[0]==-1):
-     with open (motor_filel,'w') as ml:
-       print >> ml,'-400'
-     with open (motor_filer,'w') as mr:
-       print >> mr,'-400'
+   if (msg.axes[1]==1):
+     right_motor(400)
+     left_motor(400)
+   elif (msg.axes[1]==-1):
+     right_motor(-400)
+     left_motor(-400)
+   elif(msg.axes[1] and msg.axes[1] == 0):
+     right_motor(0)
+     left_motor(0)
   
   
 

@@ -16,8 +16,8 @@ def left_motor(num):
        print >> ml,str(num)
  
 def callback(msg):
-  right_motor(msg.axes[1]*100)
-  left_motor(msg.axes[1]*100)
+  right_motor(msg.axes[1]*100.0)
+  left_motor(msg.axes[1]*100.0)
   
   
 

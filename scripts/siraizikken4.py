@@ -4,7 +4,7 @@ from sensor_msgs.msg import Joy
 
 
 def callback(msg):
-  print msg
+  print msg.buttons
 
 
 rospy.init_node("joy_subscriber")

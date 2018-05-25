@@ -17,7 +17,7 @@ def left_motor(num):
  
 def callback(msg):
   right_motor(msg.axes[1]*100.0+msg.axes[0]*100)
-  left_motor(msg.axes[1]*100.0+msg.axes[0]*100)
+  left_motor(msg.axes[1]*100.0+msg.axes[0]*-100)
   
   
 

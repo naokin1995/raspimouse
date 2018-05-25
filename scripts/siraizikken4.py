@@ -9,6 +9,7 @@ def callback(msg):
 
 rospy.init_node("joy_subscriber")
 sub = rospy.Subscriber('joy',Joy,callback,queue_size=1)
+rospy.spin()
 
 
 

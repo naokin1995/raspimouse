@@ -6,7 +6,7 @@ motor_file='/dev/rtmotoren0'
 motor_filel='/dev/rtmotor_raw_l0'
 motor_filer='/dev/rtmotor_raw_r0'
 with open (motor_file,'w') as m:
-print >> m,'1'
+ print >> m,'1'
 
 def callback(msg):
    if (axes[0]==1):

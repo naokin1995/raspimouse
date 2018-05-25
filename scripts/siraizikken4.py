@@ -9,12 +9,12 @@ with open (motor_file,'w') as m:
  print >> m,'1'
 
 def callback(msg):
-   if (axes[0]==1):
+   if (msg.axes[0]==1):
      with open (motor_filel,'w') as ml:
        print >> ml,'400'
      with open (motor_filer,'w') as mr:
        print >> mr,'400'
-   if (axes[0]==-1):
+   if (msg.axes[0]==-1):
      with open (motor_filel,'w') as ml:
        print >> ml,'-400'
      with open (motor_filer,'w') as mr:

@@ -39,10 +39,10 @@ while(1):
     right_motor(0)
     left_motor(0)
     
-    if (area_b>1000):
+    if (area_b>area_r):
         right_motor(400)
         left_motor(400)
-    elif(area_r>1000):
+    elif(area_r<araa_b):
         right_motor(-400)
         left_motor(-400)
         

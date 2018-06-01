@@ -27,8 +27,8 @@ while(1):
     upper_blue = np.array([130,255,255])
     lower_red = np.array([150,100,50])
     upper_red = np.array([180,255,255])
-    lower_red = np.array([50,100,50])
-    upper_red = np.array([100,255,255])
+    lower_yellow = np.array([50,100,50])
+    upper_yellow = np.array([100,255,255])
 
     mask_b = cv2.inRange(hsv, lower_blue, upper_blue)
     mask_r = cv2.inRange(hsv, lower_red, upper_red)

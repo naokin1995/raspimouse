@@ -47,13 +47,13 @@ while(1):
     if (area_b>area_r and area_b>area_y ):
         right_motor(400)
         left_motor(400)
-        print blue
+        print 'blue'
     elif(area_r>area_b and area_r>area_y):
         right_motor(-400)
         left_motor(-400)
-        print red
+        print 'red'
     elif(area_y>area_b and area_y>area_r):
         right_motor(0)
         left_motor(0)
-        print yellow
+        print 'yellow'
         

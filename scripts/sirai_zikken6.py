@@ -35,11 +35,11 @@ while(1):
     mask_y = cv2.inRange(hsv, lower_yellow, upper_yellow)
 
     area_b=cv2.countNonZero(mask_b)
-    print 'blue' + str(area_b)
+
     area_r=cv2.countNonZero(mask_r)
-    print 'red'+ str(area_r)
+
     area_y=cv2.countNonZero(mask_y)
-    print 'yellow'+ str(area_y)
+
     
     right_motor(0)
     left_motor(0)
@@ -47,10 +47,13 @@ while(1):
     if (area_b>area_r and area_b>area_y ):
         right_motor(400)
         left_motor(400)
+        print blue
     elif(area_r>area_b and area_r>area_y):
         right_motor(-400)
         left_motor(-400)
+        print red
     elif(area_y>area_b and area_y>area_r):
         right_motor(0)
         left_motor(0)
+        print yellow
         

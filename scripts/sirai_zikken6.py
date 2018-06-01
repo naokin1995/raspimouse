@@ -23,7 +23,7 @@ while(1):
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    lower_blue = np.array([110,50,50])
+    lower_blue = np.array([110,100,100])
     upper_blue = np.array([130,255,255])
     lower_red = np.array([150,10,15])
     upper_red = np.array([180,255,255])

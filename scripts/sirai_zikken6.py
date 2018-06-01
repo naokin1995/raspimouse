@@ -32,9 +32,9 @@ while(1):
     mask_r = cv2.inRange(hsv, lower_red, upper_red)
 
     area_b=cv2.countNonZero(mask_b)
-    print area_b
+    print 'blue' + str(area_b)
     area_r=cv2.countNonZero(mask_r)
-    print area_r
+    print 'red'+ str(area_r)
     
     right_motor(0)
     left_motor(0)

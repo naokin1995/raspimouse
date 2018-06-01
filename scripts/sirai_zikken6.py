@@ -25,8 +25,8 @@ while(1):
 
     lower_blue = np.array([110,75,100])
     upper_blue = np.array([130,255,255])
-    lower_red = np.array([150,10,15])
-    upper_red = np.array([180,255,255])
+    lower_red = np.array([140,10,15])
+    upper_red = np.array([190,255,255])
 
     
 

@@ -15,7 +15,7 @@ def right_motor(num):
        print >> mr,str(num)
 def left_motor(num):
  with open (motor_filel,'w') as ml:
-   print >> ml,str(num)
+       print >> ml,str(num)
 
 while(1):
 
@@ -42,7 +42,7 @@ while(1):
     if (area_b>1000):
         right_motor(400)
         left_motor(400)
-    rlif(area_r>1000):
+    elif(area_r>1000):
         right_motor(-400)
         left_motor(-400)
         

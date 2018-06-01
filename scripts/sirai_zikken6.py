@@ -23,7 +23,7 @@ while(1):
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    lower_blue = np.array([110,75,75])
+    lower_blue = np.array([110,75,100])
     upper_blue = np.array([130,255,255])
     lower_red = np.array([150,10,15])
     upper_red = np.array([180,255,255])
@@ -38,8 +38,7 @@ while(1):
     area_r=cv2.countNonZero(mask_r)
 
     
-    right_motor(0)
-    left_motor(0)
+    
     
     if (area_b>area_r and area_b>2000):
         right_motor(400)
@@ -49,4 +48,6 @@ while(1):
         right_motor(-400)
         left_motor(-400)
         print 'red'
-
+    else:
+        right_motor(0)
+        left_motor(0)

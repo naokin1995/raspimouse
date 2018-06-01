@@ -44,7 +44,7 @@ while(1):
         right_motor(400)
         left_motor(400)
         print 'blue'
-    elif(area_r>area_b and area_r>10000):
+    elif(area_r>area_b and area_r>6000):
         right_motor(-400)
         left_motor(-400)
         print 'red'

@@ -44,7 +44,7 @@ while True:
                 if index != -1:
                     line = line[index+6:line.find('"',index+6)]
                     strTemp += str(line)
-                    print (strTemp)
+                    print (strTemp[0])
                     if(strTemp=='前進'):
                         right_motor(400)
                         left_motor(400)

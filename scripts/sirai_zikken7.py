@@ -20,6 +20,19 @@ sock.connect((host, port))
 data =""
 killword =""
 
+motor_file='/dev/rtmotoren0'
+motor_filel='/dev/rtmotor_raw_l0'
+motor_filer='/dev/rtmotor_raw_r0'
+with open (motor_file,'w') as m:
+  print >> m,'1'
+
+def right_motor(num):
+ with open (motor_filer,'w') as mr:
+       print >> mr,str(num)
+def left_motor(num):
+ with open (motor_filel,'w') as ml:
+       print >> ml,str(num)
+        
 while True:
 
     while (1):
@@ -32,6 +45,17 @@ while True:
                     line = line[index+6:line.find('"',index+6)]
                     strTemp += str(line)
                     print (strTemp)
+                    if(strTemp='前進')
+                        right_motor(400)
+                        left_motor(400)
+                    elif(strTemp='後進')
+                        right_motor(-400)
+                        left_motor(-400)
+                    elif(strTemp='停止')
+                        right_motor(0)
+                        left_motor(0)
+                    
+                    
                 else:
                     pass
                 data = ""

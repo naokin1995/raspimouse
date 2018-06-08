@@ -45,13 +45,13 @@ while True:
                     line = line[index+6:line.find('"',index+6)]
                     strTemp += str(line)
                     print (strTemp)
-                    if(strTemp=='前進')
+                    if(strTemp=='前進'):
                         right_motor(400)
                         left_motor(400)
-                    elif(strTemp=='後進')
+                    elif(strTemp=='後進'):
                         right_motor(-400)
                         left_motor(-400)
-                    elif(strTemp=='停止')
+                    elif(strTemp=='停止'):
                         right_motor(0)
                         left_motor(0)
                     

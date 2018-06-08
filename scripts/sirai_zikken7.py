@@ -46,13 +46,13 @@ while True:
                     strTemp += str(line)
                     word = strTemp.split('\n')
                     print (word[0])
-                    if(strTemp=='前進'):
+                    if(strTemp=='前'):
                         right_motor(400)
                         left_motor(400)
-                    elif(strTemp=='後進'):
+                    elif(strTemp=='後ろ'):
                         right_motor(-400)
                         left_motor(-400)
-                    elif(strTemp=='停止'):
+                    elif(strTemp=='止まれ'):
                         right_motor(0)
                         left_motor(0)
                     

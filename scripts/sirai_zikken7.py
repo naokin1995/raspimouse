@@ -44,7 +44,7 @@ while True:
                 if index != -1:
                     line = line[index+6:line.find('"',index+6)]
                     strTemp += str(line)
-                    word = strTemp.split()
+                    word = strTemp.split('\n')
                     print (word[0])
                     if(strTemp=='前進'):
                         right_motor(400)

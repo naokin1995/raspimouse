@@ -31,52 +31,9 @@ while True:
                 if index != -1:
                     line = line[index+6:line.find('"',index+6)]
                     strTemp += str(line)
-
-                if strTemp == 'バイバイ':
-                    if killword != 'バイバイ':
-                        print ("Result: " + strTemp)
-                        os.system("aplay '/home/pi/Music/byebye.wav'")
-                        print ("<<<please speak>>>")
-                        killword = "バイバイ"
-
-                elif strTemp == 'おはよう':
-                    if killword != 'おはよう':
-                        print ("Result: " + strTemp)
-                        os.system("aplay '/home/pi/Music/ohayo.wav'")
-                        print ("<<<please speak>>>")
-                        killword = "おはよう"
-
-                elif strTemp == 'こんにちは':
-                    if killword != "こんにちは":
-                        print ("Result: " + strTemp)
-                        os.system("aplay '/home/pi/Music/konnichiwa.wav'")
-                        print ("<<<please speak>>>")
-                        killword = "こんにちは"
-
-                elif strTemp == 'こんばんは':
-                    if killword != "こんばんは":
-                        print ("Result: " + strTemp)
-                        os.system("aplay '/home/pi/Music/konbanwa.wav'")
-                        print ("<<<please speak>>>")
-                        killword = "こんばんは"
-
-                elif strTemp == 'こんばんは':
-                     if killword != "こんばんは":
-                        print ("Result: " + strTemp)
-                        os.system("aplay '/home/pi/Music/konbanwa.wav'")
-                        print ("<<<please speak>>>")
-                        killword = "こんばんは"
-
+                    print (strTemp)
                 else:
-                    print("Result:" + strTemp)
-                    i = randint(3)
-                    if i == 0:
-                        os.system("aplay: '/home/pi/Music/aizuchi00.wav'")
-                    elif i == 1:
-                        os.system("aplay: '/home/pi/Music/aizuchi01.wav'")
-                    elif i == 2:
-                        os.system("aplay: '/home/pi/Music/aizuchi02.wav'")
-                    print ("<<<please speak>>>")
+                    pass
                 data = ""
         else:
             data += str(sock.recv(1024).decode('utf-8'))
